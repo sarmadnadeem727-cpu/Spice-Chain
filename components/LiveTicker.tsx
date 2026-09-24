@@ -21,7 +21,7 @@ const LiveTicker: React.FC = () => {
                 <span className="text-white">${price.price.toLocaleString(undefined, { maximumFractionDigits: 2 })}</span>
               </div>
               
-              <div className={`flex items-center ${price.change >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+              <div className={`flex items-center ${price.change >= 0 ? 'text-cyan-400' : 'text-rose-400'}`}>
                 {price.change >= 0 ? <TrendingUp size={12} className="mr-1" /> : <TrendingDown size={12} className="mr-1" />}
                 {Math.abs(price.change).toFixed(2)}%
               </div>

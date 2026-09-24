@@ -28,7 +28,7 @@ const Onboarding: React.FC = () => {
             <div 
               key={s} 
               className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all ${
-                step >= s ? 'bg-emerald-600 text-white' : 'bg-white text-slate-400 border-2 border-slate-200'
+                step >= s ? 'bg-cyan-600 text-white' : 'bg-white text-slate-400 border-2 border-slate-200'
               }`}
             >
               {step > s ? <CheckCircle2 size={20} /> : s}
@@ -60,10 +60,10 @@ const Onboarding: React.FC = () => {
                       key={type.id}
                       onClick={() => setFormData({ ...formData, businessType: type.id })}
                       className={`flex items-center gap-6 p-6 rounded-2xl border-2 transition-all text-left ${
-                        formData.businessType === type.id ? 'border-emerald-500 bg-emerald-50' : 'border-slate-100 hover:border-slate-200'
+                        formData.businessType === type.id ? 'border-cyan-500 bg-cyan-50' : 'border-slate-100 hover:border-slate-200'
                       }`}
                     >
-                      <div className={`p-4 rounded-xl ${formData.businessType === type.id ? 'bg-emerald-600 text-white' : 'bg-slate-50 text-slate-400'}`}>
+                      <div className={`p-4 rounded-xl ${formData.businessType === type.id ? 'bg-cyan-600 text-white' : 'bg-slate-50 text-slate-400'}`}>
                         <type.icon size={28} />
                       </div>
                       <div>
@@ -82,12 +82,12 @@ const Onboarding: React.FC = () => {
                   <h2 className="text-3xl font-bold text-slate-900">Final Confirmation</h2>
                   <p className="text-slate-500">You are all set to join the global trade network.</p>
                 </div>
-                <div className="bg-emerald-50 border border-emerald-100 p-8 rounded-2xl text-center">
-                   <div className="w-16 h-16 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-cyan-50 border border-cyan-100 p-8 rounded-2xl text-center">
+                   <div className="w-16 h-16 bg-cyan-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">
                       <ShieldCheck size={32} />
                    </div>
-                   <h3 className="text-xl font-bold text-emerald-900 mb-2">Identity Verified</h3>
-                   <p className="text-emerald-700 text-sm">Your business profile has been fast-tracked for global trading.</p>
+                   <h3 className="text-xl font-bold text-cyan-900 mb-2">Identity Verified</h3>
+                   <p className="text-cyan-700 text-sm">Your business profile has been fast-tracked for global trading.</p>
                 </div>
               </div>
             )}
@@ -102,7 +102,7 @@ const Onboarding: React.FC = () => {
               </button>
               <button
                 onClick={nextStep}
-                className="bg-emerald-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-emerald-700 shadow-lg shadow-emerald-200"
+                className="bg-cyan-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:bg-cyan-700 shadow-lg shadow-cyan-200"
               >
                 {step === 2 ? 'Enter Dashboard' : 'Continue'} <ChevronRight size={20} />
               </button>

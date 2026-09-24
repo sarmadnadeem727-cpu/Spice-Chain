@@ -23,7 +23,7 @@ const KPIBox = ({ label, value, sub, icon: Icon, color }: any) => (
       <div className={`p-4 rounded-2xl ${color} bg-opacity-10 group-hover:scale-110 transition-transform`}>
         <Icon className={color.replace('bg-', 'text-')} size={24} />
       </div>
-      <div className="flex items-center gap-1 text-[10px] font-black text-emerald-500 bg-emerald-50 px-2 py-1 rounded-lg">
+      <div className="flex items-center gap-1 text-[10px] font-black text-cyan-500 bg-cyan-50 px-2 py-1 rounded-lg">
         <ArrowUpRight size={12} /> +4.2%
       </div>
     </div>
@@ -49,7 +49,7 @@ const Dashboard: React.FC = () => {
         <div>
           <h1 className="text-4xl font-black text-slate-900 tracking-tighter">Global Command Center</h1>
           <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-2 flex items-center gap-2">
-            <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+            <span className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse" />
             Live Terminal Session • {user?.region} Node
           </p>
         </div>
@@ -66,7 +66,7 @@ const Dashboard: React.FC = () => {
       {/* Primary KPIs */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <KPIBox label="Total Exposure" value="$1.2M" sub="Across 14 active contracts" icon={Activity} color="bg-blue-600" />
-        <KPIBox label="Logistics Health" value="94%" sub="3 Vessels on schedule" icon={Ship} color="bg-emerald-600" />
+        <KPIBox label="Logistics Health" value="94%" sub="3 Vessels on schedule" icon={Ship} color="bg-cyan-600" />
         <KPIBox label="Escrow Locked" value="$420K" sub="Pending milestone release" icon={ShieldCheck} color="bg-amber-600" />
         <KPIBox label="Market Index" value="+12.4%" sub="Global spice volatility" icon={Zap} color="bg-purple-600" />
       </div>
@@ -80,7 +80,7 @@ const Dashboard: React.FC = () => {
               <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">Tellicherry Index (USD/MT)</p>
             </div>
             <div className="text-right">
-              <p className="text-2xl font-black text-emerald-600">$6,450.00</p>
+              <p className="text-2xl font-black text-cyan-600">$6,450.00</p>
               <p className="text-[10px] font-black text-slate-400 uppercase">Current Benchmark</p>
             </div>
           </div>
@@ -112,8 +112,8 @@ const Dashboard: React.FC = () => {
 
         {/* Active Logistics Feed */}
         <div className="bg-slate-900 rounded-[3rem] p-10 text-white shadow-2xl relative overflow-hidden flex flex-col">
-          <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-[60px]" />
-          <h3 className="text-xl font-bold mb-8 flex items-center gap-3 tracking-tighter"><Ship className="text-emerald-400"/> Fleet Deployment</h3>
+          <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/10 rounded-full blur-[60px]" />
+          <h3 className="text-xl font-bold mb-8 flex items-center gap-3 tracking-tighter"><Ship className="text-cyan-400"/> Fleet Deployment</h3>
           
           <div className="space-y-8 flex-1">
             {[
@@ -131,7 +131,7 @@ const Dashboard: React.FC = () => {
                     initial={{ width: 0 }} 
                     animate={{ width: `${v.progress}%` }} 
                     transition={{ duration: 1, delay: i * 0.2 }}
-                    className="h-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.3)]" 
+                    className="h-full bg-cyan-500 shadow-[0_0_15px_rgba(16,185,129,0.3)]" 
                   />
                 </div>
               </div>
@@ -179,15 +179,15 @@ const Dashboard: React.FC = () => {
            </div>
         </div>
 
-        <div className="bg-emerald-600 rounded-[3rem] p-10 text-white shadow-2xl flex flex-col justify-between group">
+        <div className="bg-cyan-600 rounded-[3rem] p-10 text-white shadow-2xl flex flex-col justify-between group">
           <div className="space-y-6">
             <div className="w-14 h-14 bg-white/20 rounded-[1.5rem] flex items-center justify-center backdrop-blur-md">
               <Globe size={32} />
             </div>
             <h3 className="text-3xl font-black leading-none tracking-tighter">Verified <br/>Origin Protocol</h3>
-            <p className="text-emerald-100 text-sm font-medium leading-relaxed opacity-80">Your regional trust score is in the top 5% of global exporters. Continue maintaining compliance to reduce trade friction.</p>
+            <p className="text-cyan-100 text-sm font-medium leading-relaxed opacity-80">Your regional trust score is in the top 5% of global exporters. Continue maintaining compliance to reduce trade friction.</p>
           </div>
-          <button className="mt-10 py-4 bg-white text-emerald-600 rounded-2xl text-[10px] font-black uppercase tracking-widest group-hover:scale-105 transition-transform">
+          <button className="mt-10 py-4 bg-white text-cyan-600 rounded-2xl text-[10px] font-black uppercase tracking-widest group-hover:scale-105 transition-transform">
             Review Credentials
           </button>
         </div>

@@ -22,17 +22,17 @@ const AdminOps: React.FC = () => {
           <h1 className="text-3xl font-bold text-slate-900">Internal Ops</h1>
           <p className="text-slate-500">Seed budget and platform infrastructure monitoring.</p>
         </div>
-        <div className="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-lg text-sm font-bold flex items-center gap-2">
+        <div className="px-4 py-2 bg-cyan-100 text-cyan-700 rounded-lg text-sm font-bold flex items-center gap-2">
           <Wallet size={16} /> Admin Verified
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-slate-900 text-white p-8 rounded-3xl relative overflow-hidden">
-          <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-emerald-500/10 blur-3xl rounded-full" />
+          <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full" />
           <div className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-2">Seed Budget</div>
           <div className="text-4xl font-bold mb-1">PKR 20,000</div>
-          <div className="text-emerald-400 text-sm font-medium">Platform Initial Capital</div>
+          <div className="text-cyan-400 text-sm font-medium">Platform Initial Capital</div>
           <div className="mt-8 grid grid-cols-2 gap-4 border-t border-slate-800 pt-6">
             <div>
               <div className="text-[10px] text-slate-500 uppercase font-bold">Allocated</div>
@@ -40,7 +40,7 @@ const AdminOps: React.FC = () => {
             </div>
             <div>
               <div className="text-[10px] text-slate-500 uppercase font-bold">Remaining</div>
-              <div className="font-bold text-emerald-400">PKR 7,500</div>
+              <div className="font-bold text-cyan-400">PKR 7,500</div>
             </div>
           </div>
         </div>

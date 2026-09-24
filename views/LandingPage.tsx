@@ -27,8 +27,8 @@ const LandingPage: React.FC = () => {
       
       <header className="px-10 py-6 flex justify-between items-center border-b border-slate-100 glass sticky top-0 z-[60]">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-200">
-            <Package size={28} strokeWidth={2.5} />
+          <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-200 overflow-hidden p-1 border border-slate-100">
+            <img src="/logo.png" alt="SpiceChain Logo" className="w-full h-full object-contain" />
           </div>
           <div className="hidden sm:block">
             <span className="text-slate-900 font-black text-2xl tracking-tighter block leading-none">SpiceChain</span>
@@ -37,9 +37,9 @@ const LandingPage: React.FC = () => {
         </div>
         <div className="flex items-center gap-8">
           <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-slate-500">
-            <a href="#features" className="hover:text-emerald-600 transition-colors">Features</a>
-            <a href="#network" className="hover:text-emerald-600 transition-colors">Global Network</a>
-            <a href="#" className="hover:text-emerald-600 transition-colors">Documentation</a>
+            <a href="#features" className="hover:text-cyan-600 transition-colors">Features</a>
+            <a href="#network" className="hover:text-cyan-600 transition-colors">Global Network</a>
+            <a href="#" className="hover:text-cyan-600 transition-colors">Documentation</a>
           </nav>
           <button 
             onClick={() => navigate('/login')}
@@ -52,7 +52,7 @@ const LandingPage: React.FC = () => {
 
       <main>
         <section className="relative pt-32 pb-40 px-6">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-emerald-50 opacity-40 blur-[120px] rounded-full -z-10"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-cyan-50 opacity-40 blur-[120px] rounded-full -z-10"></div>
           
           <div className="max-w-5xl mx-auto text-center">
             <motion.div
@@ -60,12 +60,12 @@ const LandingPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-black uppercase tracking-widest mb-10 border border-emerald-100">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-50 text-cyan-700 text-[10px] font-black uppercase tracking-widest mb-10 border border-cyan-100">
                 <Shield size={14} /> Decentralized Trade Authority v2.4
               </div>
               <h1 className="text-7xl md:text-8xl font-black tracking-tighter text-slate-900 mb-10 leading-[0.9]">
                 Global Trade. <br />
-                <span className="text-emerald-600 italic">Local Roots.</span>
+                <span className="text-cyan-600 italic">Local Roots.</span>
               </h1>
               <p className="text-xl text-slate-500 mb-16 max-w-2xl mx-auto leading-relaxed font-medium">
                 The premier B2B SaaS platform for the global spice exchange. Verify origins, secure logistics, and negotiate milestone-based contracts in one secure ledger.
@@ -74,13 +74,13 @@ const LandingPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <button 
                   onClick={() => navigate('/login')}
-                  className="bg-slate-900 text-white px-10 py-5 rounded-[2rem] font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-emerald-600 transition-all shadow-2xl shadow-slate-200"
+                  className="bg-slate-900 text-white px-10 py-5 rounded-[2rem] font-black text-sm uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-cyan-600 transition-all shadow-2xl shadow-slate-200"
                 >
                   Enter Trade Room <ArrowRight size={20} />
                 </button>
                 <button 
                   onClick={() => setShowDemoModal(true)}
-                  className="bg-white border-2 border-slate-100 text-slate-900 px-10 py-5 rounded-[2rem] font-black text-sm uppercase tracking-widest hover:border-emerald-600 transition-all shadow-sm"
+                  className="bg-white border-2 border-slate-100 text-slate-900 px-10 py-5 rounded-[2rem] font-black text-sm uppercase tracking-widest hover:border-cyan-600 transition-all shadow-sm"
                 >
                   Request Demo
                 </button>
@@ -95,7 +95,7 @@ const LandingPage: React.FC = () => {
               title: "Verified Origin Proof", 
               desc: "Every batch is verified through a 3-step phytosanitary check and blockchain-backed origin proof, adhering to local root standards.",
               icon: Shield,
-              color: "text-emerald-600"
+              color: "text-cyan-600"
             },
             { 
               title: "Market Depth AI", 
@@ -116,7 +116,7 @@ const LandingPage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
-              className="p-10 rounded-[2.5rem] border border-slate-100 bg-slate-50/50 hover:border-emerald-200 hover:bg-white transition-all group shadow-sm hover:shadow-xl hover:shadow-emerald-900/5"
+              className="p-10 rounded-[2.5rem] border border-slate-100 bg-slate-50/50 hover:border-cyan-200 hover:bg-white transition-all group shadow-sm hover:shadow-xl hover:shadow-cyan-900/5"
             >
               <div className="mb-8 p-4 bg-white rounded-2xl inline-block shadow-sm group-hover:scale-110 transition-transform">
                 <feature.icon className={`${feature.color}`} size={32} />
@@ -144,8 +144,8 @@ const LandingPage: React.FC = () => {
               {!demoRequested ? (
                 <>
                   <div className="mb-8 text-center">
-                    <div className="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-200">
-                      <Package size={32} strokeWidth={2.5} />
+                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-cyan-200 overflow-hidden p-2 border border-slate-100">
+                      <img src="/logo.png" alt="SpiceChain Logo" className="w-full h-full object-contain" />
                     </div>
                     <h3 className="text-3xl font-black text-slate-900 mb-2 tracking-tighter">Enterprise Access</h3>
                     <p className="text-slate-500 font-medium">Join the global spice trade network today.</p>
@@ -161,7 +161,7 @@ const LandingPage: React.FC = () => {
                           value={demoData.company}
                           onChange={(e) => setDemoData({ ...demoData, company: e.target.value })}
                           placeholder="Global Spice Hub Ltd"
-                          className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 transition-all font-medium"
+                          className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 transition-all font-medium"
                         />
                       </div>
                     </div>
@@ -175,18 +175,18 @@ const LandingPage: React.FC = () => {
                           value={demoData.email}
                           onChange={(e) => setDemoData({ ...demoData, email: e.target.value })}
                           placeholder="trade@spicehub.com"
-                          className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-4 focus:ring-emerald-500/10 focus:border-emerald-500 transition-all font-medium"
+                          className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-100 rounded-2xl outline-none focus:ring-4 focus:ring-cyan-500/10 focus:border-cyan-500 transition-all font-medium"
                         />
                       </div>
                     </div>
-                    <button type="submit" className="w-full bg-slate-900 text-white py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-emerald-600 transition-all mt-4 shadow-xl shadow-slate-200">
+                    <button type="submit" className="w-full bg-slate-900 text-white py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-cyan-600 transition-all mt-4 shadow-xl shadow-slate-200">
                       Request Full Terminal Preview
                     </button>
                   </form>
                 </>
               ) : (
                 <div className="text-center py-8">
-                  <div className="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
+                  <div className="w-20 h-20 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
                     <CheckCircle size={40} />
                   </div>
                   <h3 className="text-3xl font-black text-slate-900 mb-3 tracking-tighter">Request Received</h3>
@@ -202,8 +202,8 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-12">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-slate-200 rounded-xl flex items-center justify-center text-slate-400">
-                <Package size={20} />
+              <div className="w-10 h-10 bg-white border border-slate-200 rounded-xl flex items-center justify-center overflow-hidden p-1">
+                <img src="/logo.png" alt="SpiceChain Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <span className="text-slate-900 font-black text-lg tracking-tighter block leading-none">SpiceChain</span>
@@ -211,10 +211,10 @@ const LandingPage: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-12 text-sm font-black uppercase tracking-widest text-slate-400">
-              <a href="#" className="hover:text-emerald-600 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-emerald-600 transition-colors">Terms of Trade</a>
-              <a href="#" className="hover:text-emerald-600 transition-colors">Compliance</a>
-              <a href="#" className="hover:text-emerald-600 transition-colors">Global Support</a>
+              <a href="#" className="hover:text-cyan-600 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-cyan-600 transition-colors">Terms of Trade</a>
+              <a href="#" className="hover:text-cyan-600 transition-colors">Compliance</a>
+              <a href="#" className="hover:text-cyan-600 transition-colors">Global Support</a>
             </div>
           </div>
           <div className="mt-16 text-center text-[10px] text-slate-400 font-black uppercase tracking-[0.3em] opacity-40">

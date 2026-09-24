@@ -41,8 +41,8 @@ const Logistics: React.FC = () => {
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">Vessel ID: SC-T721-X9 • Origin: Cochin Hub</p>
                 </div>
               </div>
-              <div className="px-5 py-2 bg-emerald-50 text-emerald-600 rounded-2xl text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+              <div className="px-5 py-2 bg-cyan-50 text-cyan-600 rounded-2xl text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
+                <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse" />
                 In-Transit
               </div>
             </div>
@@ -67,7 +67,7 @@ const Logistics: React.FC = () => {
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ delay: i * 0.4 }}
                       className={`w-14 h-14 rounded-2xl flex items-center justify-center border-4 border-white shadow-xl transition-all ${
-                        node.status === 'Completed' ? 'bg-emerald-500 text-white' : 
+                        node.status === 'Completed' ? 'bg-cyan-500 text-white' : 
                         node.status === 'Active' ? 'bg-blue-600 text-white ring-8 ring-blue-500/10' : 
                         'bg-white text-slate-200 border-slate-50'
                       }`}
@@ -120,7 +120,7 @@ const Logistics: React.FC = () => {
                ].map((log, i) => (
                  <div key={i} className="flex items-center justify-between p-4 bg-slate-50 rounded-2xl hover:bg-slate-100 transition-colors cursor-default">
                     <div className="flex items-center gap-4">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full" />
+                      <div className="w-2 h-2 bg-cyan-500 rounded-full" />
                       <div>
                         <p className="text-sm font-bold text-slate-900">{log.event}</p>
                         <p className="text-xs text-slate-400 font-medium">{log.time}</p>
@@ -135,7 +135,7 @@ const Logistics: React.FC = () => {
 
         <div className="space-y-8">
           <div className="bg-slate-900 p-10 rounded-[3rem] text-white shadow-2xl">
-            <h4 className="text-xl font-black mb-8 flex items-center gap-3"><Zap className="text-emerald-400"/> Trade Logistics Fee</h4>
+            <h4 className="text-xl font-black mb-8 flex items-center gap-3"><Zap className="text-cyan-400"/> Trade Logistics Fee</h4>
             <div className="space-y-6">
               {[
                 { l: 'Ocean Freight (MT)', v: '$2,840', s: 'Current Market rate' },
@@ -148,8 +148,8 @@ const Logistics: React.FC = () => {
                 </div>
               ))}
               <div className="pt-8 border-t border-slate-800 flex justify-between items-end">
-                <div><p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Total Overhead</p><p className="text-4xl font-black text-emerald-400 tracking-tighter">$4,170</p></div>
-                <div className="bg-emerald-500/10 px-3 py-1 rounded-full text-[10px] font-black text-emerald-400 uppercase">Save 12% on Hubs</div>
+                <div><p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Total Overhead</p><p className="text-4xl font-black text-cyan-400 tracking-tighter">$4,170</p></div>
+                <div className="bg-cyan-500/10 px-3 py-1 rounded-full text-[10px] font-black text-cyan-400 uppercase">Save 12% on Hubs</div>
               </div>
             </div>
             <button className="w-full mt-10 py-5 bg-white text-slate-900 rounded-3xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-slate-100 transition-all">Download Proforma Invoice</button>
@@ -166,7 +166,7 @@ const Logistics: React.FC = () => {
                 { label: 'Port Arrival Verification', done: false },
               ].map((task, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all ${task.done ? 'bg-emerald-50 text-emerald-600' : 'bg-slate-50 text-slate-200'}`}>
+                  <div className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-all ${task.done ? 'bg-cyan-50 text-cyan-600' : 'bg-slate-50 text-slate-200'}`}>
                     <CheckCircle size={20} />
                   </div>
                   <span className={`text-xs font-bold uppercase tracking-tight ${task.done ? 'text-slate-900' : 'text-slate-300'}`}>{task.label}</span>

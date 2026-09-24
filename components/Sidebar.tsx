@@ -32,8 +32,8 @@ const Sidebar: React.FC = () => {
     <div className="fixed inset-y-0 left-0 w-64 bg-white border-r border-slate-100 flex flex-col z-50 hidden md:flex">
       <div className="p-6">
         <Link to="/dashboard" className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-200">
-            <Package size={24} strokeWidth={2.5} />
+          <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-200 overflow-hidden p-1 border border-slate-100">
+            <img src="/logo.png" alt="SpiceChain Logo" className="w-full h-full object-contain" />
           </div>
           <div>
             <span className="text-slate-900 font-black text-xl tracking-tighter block leading-none">SpiceChain</span>
@@ -51,7 +51,7 @@ const Sidebar: React.FC = () => {
               to={item.path}
               className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold tracking-tight transition-all ${
                 isActive 
-                ? 'bg-emerald-50 text-emerald-700 shadow-sm' 
+                ? 'bg-cyan-50 text-cyan-700 shadow-sm' 
                 : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'
               }`}
             >
@@ -60,7 +60,7 @@ const Sidebar: React.FC = () => {
                 {item.name}
               </div>
               {item.badge && item.badge > 0 && (
-                <span className="bg-emerald-600 text-white text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full">
+                <span className="bg-cyan-600 text-white text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full">
                   {item.badge}
                 </span>
               )}
@@ -74,7 +74,7 @@ const Sidebar: React.FC = () => {
           <div className="text-[10px] text-slate-400 font-black uppercase tracking-widest mb-2">Authenticated Terminal</div>
           <div className="text-sm font-bold text-slate-900 truncate mb-1">{user?.email}</div>
           <div className={`text-[10px] uppercase font-black px-2 py-0.5 rounded-lg inline-block ${
-            user?.type === 'Buyer' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700'
+            user?.type === 'Buyer' ? 'bg-cyan-100 text-cyan-700' : 'bg-amber-100 text-amber-700'
           }`}>
             {user?.type} Account
           </div>

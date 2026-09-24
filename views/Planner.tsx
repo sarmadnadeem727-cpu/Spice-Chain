@@ -25,7 +25,7 @@ const Planner: React.FC = () => {
           <h1 className="text-3xl font-bold text-slate-900">{isSeller ? 'Harvest Planner' : 'Procurement Tracker'}</h1>
           <p className="text-slate-500">Manage crop cycles and critical operational milestones.</p>
         </div>
-        <button className="bg-emerald-600 text-white px-6 py-2 rounded-xl font-bold flex items-center gap-2 hover:bg-emerald-700 transition-all">
+        <button className="bg-cyan-600 text-white px-6 py-2 rounded-xl font-bold flex items-center gap-2 hover:bg-cyan-700 transition-all">
           <Calendar size={18} /> Add Entry
         </button>
       </div>
@@ -50,11 +50,11 @@ const Planner: React.FC = () => {
             <div className="grid grid-cols-7 gap-4">
               {Array(31).fill(0).map((_, i) => (
                 <div key={i} className={`aspect-square border border-slate-50 rounded-2xl p-2 relative transition-colors ${
-                  [12, 18, 24].includes(i+1) ? 'bg-emerald-50/50 border-emerald-100' : 'hover:bg-slate-50 cursor-pointer'
+                  [12, 18, 24].includes(i+1) ? 'bg-cyan-50/50 border-cyan-100' : 'hover:bg-slate-50 cursor-pointer'
                 }`}>
-                  <span className={`text-sm font-bold ${[12, 18, 24].includes(i+1) ? 'text-emerald-600' : 'text-slate-400'}`}>{i + 1}</span>
+                  <span className={`text-sm font-bold ${[12, 18, 24].includes(i+1) ? 'text-cyan-600' : 'text-slate-400'}`}>{i + 1}</span>
                   {[12, 24].includes(i+1) && (
-                    <div className="absolute bottom-2 left-2 right-2 h-1 bg-emerald-500 rounded-full" />
+                    <div className="absolute bottom-2 left-2 right-2 h-1 bg-cyan-500 rounded-full" />
                   )}
                   {i+1 === 18 && (
                     <div className="absolute bottom-2 left-2 right-2 h-1 bg-amber-500 rounded-full" />
@@ -86,7 +86,7 @@ const Planner: React.FC = () => {
         <div className="space-y-6">
           <div className="bg-slate-50 border border-slate-100 rounded-3xl p-6">
             <h3 className="font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <CheckCircle2 size={18} className="text-emerald-600" /> Critical Timeline
+              <CheckCircle2 size={18} className="text-cyan-600" /> Critical Timeline
             </h3>
             <div className="space-y-4">
               {upcomingEvents.map((event, i) => (
@@ -95,10 +95,10 @@ const Planner: React.FC = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-white p-4 rounded-2xl border border-slate-100 hover:border-emerald-200 transition-all group"
+                  className="bg-white p-4 rounded-2xl border border-slate-100 hover:border-cyan-200 transition-all group"
                 >
                   <div className="flex justify-between items-start mb-2">
-                    <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">{event.date}</span>
+                    <span className="text-xs font-bold text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded-full">{event.date}</span>
                     <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
                       event.risk === 'None' ? 'bg-slate-100 text-slate-400' : 'bg-amber-100 text-amber-700'
                     }`}>
@@ -113,7 +113,7 @@ const Planner: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-            <button className="w-full mt-6 py-3 text-sm font-bold text-slate-500 hover:text-emerald-600 transition-colors">
+            <button className="w-full mt-6 py-3 text-sm font-bold text-slate-500 hover:text-cyan-600 transition-colors">
               View Detailed Schedule
             </button>
           </div>

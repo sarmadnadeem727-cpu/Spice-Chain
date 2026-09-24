@@ -194,7 +194,7 @@ const Marketplace: React.FC = () => {
               placeholder="Search Origin, Batch..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-12 pr-6 py-3 bg-white border border-slate-100 rounded-2xl w-full sm:w-64 focus:ring-4 focus:ring-emerald-500/5 transition-all outline-none font-medium"
+              className="pl-12 pr-6 py-3 bg-white border border-slate-100 rounded-2xl w-full sm:w-64 focus:ring-4 focus:ring-cyan-500/5 transition-all outline-none font-medium"
             />
           </div>
           <div className="flex gap-2 bg-white p-1 border border-slate-100 rounded-2xl shadow-sm">
@@ -217,7 +217,7 @@ const Marketplace: React.FC = () => {
               <img src={listing.thumbnail} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={listing.name} />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
               <div className="absolute top-5 right-5">
-                <div className="bg-white/90 backdrop-blur px-3 py-1.5 rounded-xl flex items-center gap-2 text-[10px] font-black text-emerald-600 shadow-xl">
+                <div className="bg-white/90 backdrop-blur px-3 py-1.5 rounded-xl flex items-center gap-2 text-[10px] font-black text-cyan-600 shadow-xl">
                   <Award size={12} /> {listing.trustScore.rating}% Reliability
                 </div>
               </div>
@@ -269,10 +269,10 @@ const Marketplace: React.FC = () => {
                     <div className="bg-slate-50/50 p-8 rounded-[2.5rem] border border-slate-100">
                       <div className="flex justify-between items-center mb-6">
                         <div className="flex items-center gap-2">
-                           <BarChart2 className="text-emerald-500" size={18} />
+                           <BarChart2 className="text-cyan-500" size={18} />
                            <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-900">Institutional Price Index</h4>
                         </div>
-                        <span className="text-[9px] font-black text-emerald-600 bg-emerald-50 px-2 py-1 rounded-lg flex items-center gap-1">
+                        <span className="text-[9px] font-black text-cyan-600 bg-cyan-50 px-2 py-1 rounded-lg flex items-center gap-1">
                           <TrendingUp size={12} /> 30-Day Outlook
                         </span>
                       </div>
@@ -304,7 +304,7 @@ const Marketplace: React.FC = () => {
                             type="number" 
                             value={bidAmount} 
                             onChange={(e) => setBidAmount(Number(e.target.value))}
-                            className="w-full bg-transparent text-5xl font-black text-slate-900 outline-none border-b-4 border-slate-100 focus:border-emerald-500 pb-2 transition-all"
+                            className="w-full bg-transparent text-5xl font-black text-slate-900 outline-none border-b-4 border-slate-100 focus:border-cyan-500 pb-2 transition-all"
                           />
                         </div>
                         <div className="flex-1 space-y-2">
@@ -313,7 +313,7 @@ const Marketplace: React.FC = () => {
                             type="number" 
                             value={qty} 
                             onChange={(e) => setQty(Number(e.target.value))}
-                            className="w-full bg-transparent text-5xl font-black text-slate-900 outline-none border-b-4 border-slate-100 focus:border-emerald-500 pb-2 transition-all"
+                            className="w-full bg-transparent text-5xl font-black text-slate-900 outline-none border-b-4 border-slate-100 focus:border-cyan-500 pb-2 transition-all"
                           />
                         </div>
                       </div>
@@ -322,7 +322,7 @@ const Marketplace: React.FC = () => {
                          <button 
                           onClick={runAnalysis}
                           disabled={isAnalyzing}
-                          className="flex items-center gap-2 text-xs font-black uppercase text-emerald-600 hover:text-emerald-700 disabled:opacity-50"
+                          className="flex items-center gap-2 text-xs font-black uppercase text-cyan-600 hover:text-cyan-700 disabled:opacity-50"
                          >
                            <Zap size={16} className={isAnalyzing ? 'animate-pulse' : ''} /> {isAnalyzing ? 'Analyzing Terminal Data...' : 'AI Trade Guardrail'}
                          </button>
@@ -330,7 +330,7 @@ const Marketplace: React.FC = () => {
                       </div>
 
                       {aiAnalysis && (
-                        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className={`p-6 rounded-3xl border ${aiAnalysis.isAnomaly ? 'bg-amber-50 border-amber-100 text-amber-900' : 'bg-emerald-50 border-emerald-100 text-emerald-900'}`}>
+                        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className={`p-6 rounded-3xl border ${aiAnalysis.isAnomaly ? 'bg-amber-50 border-amber-100 text-amber-900' : 'bg-cyan-50 border-cyan-100 text-cyan-900'}`}>
                           <div className="flex items-start gap-4">
                             <AlertCircle size={20} className="mt-0.5" />
                             <div>
@@ -378,7 +378,7 @@ const Marketplace: React.FC = () => {
                         </div>
                         <div className="flex justify-between text-3xl font-black pt-2">
                           <span className="text-slate-900 uppercase tracking-widest text-[10px] mt-2">Total L/C Value</span>
-                          <span className="text-emerald-600">${totalContractValue.toLocaleString()}</span>
+                          <span className="text-cyan-600">${totalContractValue.toLocaleString()}</span>
                         </div>
                       </div>
                     </div>
@@ -389,7 +389,7 @@ const Marketplace: React.FC = () => {
                         {milestones.map((m, i) => (
                           <div key={i} className="relative">
                             <div className="absolute -left-[35px] w-8 h-8 bg-white border-2 border-slate-900 rounded-xl z-10 flex items-center justify-center font-black text-[10px] shadow-sm">{i+1}</div>
-                            <div className="flex justify-between items-center bg-white border border-slate-100 p-8 rounded-[1.5rem] shadow-sm hover:border-emerald-200 transition-colors">
+                            <div className="flex justify-between items-center bg-white border border-slate-100 p-8 rounded-[1.5rem] shadow-sm hover:border-cyan-200 transition-colors">
                               <div><p className="font-black text-slate-900 text-sm">{m.description}</p><p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">{m.percentage}% Tranche Release</p></div>
                               <p className="text-2xl font-black text-slate-900">${m.amount.toLocaleString()}</p>
                             </div>
@@ -400,7 +400,7 @@ const Marketplace: React.FC = () => {
 
                     <button 
                       onClick={handleLockTrade}
-                      className="w-full py-6 bg-emerald-600 text-white rounded-[2rem] font-black text-lg shadow-2xl flex items-center justify-center gap-3 hover:bg-emerald-700 transition-all"
+                      className="w-full py-6 bg-cyan-600 text-white rounded-[2rem] font-black text-lg shadow-2xl flex items-center justify-center gap-3 hover:bg-cyan-700 transition-all"
                     >
                       <ShieldCheck size={24}/> Authorize Contract & Lock Escrow
                     </button>
@@ -410,7 +410,7 @@ const Marketplace: React.FC = () => {
 
               <div className="w-full md:w-[450px] bg-slate-50 p-12 flex flex-col space-y-12 h-full overflow-y-auto">
                 <div>
-                  <h4 className="text-lg font-black text-slate-900 mb-8 flex items-center gap-3 tracking-tight"><RadarIcon size={20} className="text-emerald-600"/> Merchant Trust Scoring</h4>
+                  <h4 className="text-lg font-black text-slate-900 mb-8 flex items-center gap-3 tracking-tight"><RadarIcon size={20} className="text-cyan-600"/> Merchant Trust Scoring</h4>
                   <div className="h-64 w-full">
                     <ResponsiveContainer width="100%" height="100%">
                       <RadarChart cx="50%" cy="50%" outerRadius="80%" data={selectedListing.trustScore.metrics}>
